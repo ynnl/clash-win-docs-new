@@ -29,7 +29,7 @@ export default {
         },
         {
           url: "https://fastlink.ws/auth/register?code=clashw",
-          img: "http://download.fastlink.ws/fastlink_banner.jpg",
+          img: "https://download.fastlink.digital/fastlink_banner.jpg",
         },
         {
           url: "http://cylink.wtf",
