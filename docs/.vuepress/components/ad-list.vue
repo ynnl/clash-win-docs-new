@@ -20,10 +20,6 @@ export default {
           img: "https://i.loli.net/2021/03/24/G15Fj3dLTcqDM74.jpg",
         },
         {
-          url: "https://aaex.uk/cart.php?language=chinese",
-          img: "https://api.crhnode.top/banner.png",
-        },
-        {
           url: "https://jike138.net/auth/register?code=LdON",
           img: "https://sy168.site/tupian/clash.jpg",
         },
