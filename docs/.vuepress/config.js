@@ -68,6 +68,7 @@ module.exports = {
           "/contents/tap",
           "/contents/mixin",
           "/contents/parser",
+          "/contents/diff",
           "/contents/lightweight",
           "/contents/dhcp",
           "/contents/tray",
