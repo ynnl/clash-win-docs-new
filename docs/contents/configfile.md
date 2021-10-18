@@ -2,7 +2,7 @@
 
 ## 格式
 
-Clash 配置文件格式为[YAML]()，具体写法参考：https://github.com/Dreamacro/clash#config
+Clash 配置文件格式为[YAML]()，具体写法参考：https://github.com/Dreamacro/clash/wiki/configuration
 
 CFW 启动的过程会使用到两个配置文件，分别是：
 
