@@ -2,6 +2,93 @@
 
 [[toc]]
 
+### Service Mode 无法安装（Windows）
+
+<question-answer>
+
+先确定系统安装了`.NET framework runtime`
+
+然后尝试手动安装：
+
+1. 点击 General 中的 Home Directory 打开文件夹，进入 service 子目录中
+2. 打开 CMD，执行以下命令：
+
+```
+service.exe install
+service.exe start
+```
+
+如安装出现错误，参考[这个 issue](https://github.com/Fndroid/clash_for_windows_pkg/issues/1627)
+
+</question-answer>
+
+### Service Mode 无法安装（macOS）
+
+<question-answer>
+
+1. 拷贝一下内容到任意目录的`service-mode-installer.sh`文件中：
+
+   ```bash
+    #！/bin/bash
+    COMMAND="$1"
+
+    UANMEA=$(uname -a)
+    ARCH="arm64"
+    DEST=$HOME/.config/clash/service
+    PLIST=/Library/LaunchDaemons/com.lbyczf.cfw.helper.plist
+
+    if [[ $UANMEA == *"x86_64" ]]; then
+      ARCH="x64"
+    fi
+
+    SOURCE=/Applications/Clash\ for\ Windows.app/Contents/Resources/static/files/darwin/$ARCH/service
+
+    read -r -d '' PLIST_CONTENT << EOM
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+        <dict>
+            <key>Label</key>
+            <string>com.lbyczf.cfw.helper</string>
+            <key>Program</key>
+            <string>$DEST/clash-core-service</string>
+            <key>RunAtLoad</key>
+            <true/>
+            <key>KeepAlive</key>
+            <true/>
+            <key>HardResourceLimits</key>
+            <dict>
+                <key>NumberOfFiles</key>
+                <integer>10240</integer>
+            </dict>
+            <key>SoftResourceLimits</key>
+            <dict>
+                <key>NumberOfFiles</key>
+                <integer>10240</integer>
+            </dict>
+        </dict>
+    </plist>
+    EOM
+
+    if [ "$COMMAND" = "install" ]; then
+      rm -rf "$DEST"
+      cp -R "$SOURCE" "$DEST"
+      echo $PLIST_CONTENT > $PLIST
+      launchctl unload $PLIST &>/dev/null
+      launchctl load $PLIST
+    fi
+
+    if [ "$COMMAND" = "uninstall" ]; then
+      launchctl unload $PLIST
+      rm -rf "$DEST"
+      rm -rf $PLIST
+    fi
+   ```
+
+2. 执行命令`chmod +x serive-mode-installer.sh && sudo ./serive-mode-installer.sh install`
+
+</question-answer>
+
 ### macOS 版本启动要求授权
 
 <question-answer >
@@ -43,26 +130,6 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
 <question-answer>
 
 [参考](https://github.com/Fndroid/clash_for_windows_pkg/issues/1243#issuecomment-751165537)
-
-</question-answer>
-
-### Service Mode 无法安装（Windows）
-
-<question-answer>
-
-先确定系统安装了`.NET framework runtime`
-
-然后尝试手动安装：
-
-1. 点击 General 中的 Home Directory 打开文件夹，进入 service 子目录中
-2. 打开 CMD，执行以下命令：
-
-```
-service.exe install
-service.exe start
-```
-
-如安装出现错误，参考[这个 issue](https://github.com/Fndroid/clash_for_windows_pkg/issues/1627)
 
 </question-answer>
 
