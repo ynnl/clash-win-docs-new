@@ -85,7 +85,7 @@ service.exe start
     fi
    ```
 
-2. 执行命令`chmod +x serive-mode-installer.sh && sudo ./serive-mode-installer.sh install`
+2. 执行命令`chmod +x service-mode-installer.sh && sudo ./service-mode-installer.sh install`
 
 </question-answer>
 
