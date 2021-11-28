@@ -145,7 +145,7 @@ dns:
 tun:
   enable: true
   stack: system # 或 gvisor
-  dns-hijack: # DNS劫持设置为系统DNS
+  dns-hijack:
     - 1.0.0.1:53 # 请勿更改
 ```
 
