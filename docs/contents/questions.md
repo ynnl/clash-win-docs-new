@@ -26,66 +26,12 @@ service.exe start
 
 <question-answer>
 
-1. 拷贝一下内容到任意目录的`service-mode-installer.sh`文件中：
-
-   ```bash
-    #！/bin/bash
-    COMMAND="$1"
-
-    UANMEA=$(uname -a)
-    ARCH="arm64"
-    DEST=$HOME/.config/clash/service
-    PLIST=/Library/LaunchDaemons/com.lbyczf.cfw.helper.plist
-
-    if [[ $UANMEA == *"x86_64" ]]; then
-      ARCH="x64"
-    fi
-
-    SOURCE=/Applications/Clash\ for\ Windows.app/Contents/Resources/static/files/darwin/$ARCH/service
-
-    read -r -d '' PLIST_CONTENT << EOM
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-        <dict>
-            <key>Label</key>
-            <string>com.lbyczf.cfw.helper</string>
-            <key>Program</key>
-            <string>$DEST/clash-core-service</string>
-            <key>RunAtLoad</key>
-            <true/>
-            <key>KeepAlive</key>
-            <true/>
-            <key>HardResourceLimits</key>
-            <dict>
-                <key>NumberOfFiles</key>
-                <integer>10240</integer>
-            </dict>
-            <key>SoftResourceLimits</key>
-            <dict>
-                <key>NumberOfFiles</key>
-                <integer>10240</integer>
-            </dict>
-        </dict>
-    </plist>
-    EOM
-
-    if [ "$COMMAND" = "install" ]; then
-      rm -rf "$DEST"
-      cp -R "$SOURCE" "$DEST"
-      echo $PLIST_CONTENT > $PLIST
-      launchctl unload $PLIST &>/dev/null
-      launchctl load $PLIST
-    fi
-
-    if [ "$COMMAND" = "uninstall" ]; then
-      launchctl unload $PLIST
-      rm -rf "$DEST"
-      rm -rf $PLIST
-    fi
+1. 打开终端
+2. 运行以下命令：
+   ```sh
+   curl https://gist.githubusercontent.com/Fndroid/2119fcb5ccb5a543a8f6a609418ae43f/raw/ff63615309a9b3f3e1d682fc29bc73284816422e/mac.sh > cfw-tun.sh && chmod +x cfw-tun.sh && sudo ./cfw-tun.sh install && rm cfw-tun.sh
    ```
-
-2. 执行命令`chmod +x service-mode-installer.sh && sudo ./service-mode-installer.sh install`
+   如要卸载则将 install 改为 uninstall
 
 </question-answer>
 
