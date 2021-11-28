@@ -12,7 +12,7 @@
 ```yaml
 dns:
   enable: true
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   nameserver:
     - 8.8.8.8 # 真实请求DNS，可多设置几个
     - 114.114.114.114
@@ -47,7 +47,7 @@ dns:
 ```
 
 ::: tip
-TUN 模式更推荐使用 redir-host 模式
+TUN 模式更推荐使用 fake-ip 模式
 :::
 
 ## macOS
@@ -60,7 +60,7 @@ TUN 模式更推荐使用 redir-host 模式
 ```yaml
 dns:
   enable: true
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   nameserver:
     - 114.114.114.114 # 真实请求DNS，可多设置几个
 # interface-name: en0 # 出口网卡名称，或者使用下方的自动检测
@@ -139,7 +139,7 @@ net.inet6.ip6.forwarding=1
 ```yaml
 dns:
   enable: true
-  enhanced-mode: redir-host
+  enhanced-mode: fake-ip
   nameserver:
     - 114.114.114.114 # 真实请求DNS，可多设置几个
 tun:

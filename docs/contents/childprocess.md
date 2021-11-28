@@ -15,6 +15,7 @@
          - "abcdefghijk" # 运行参数2
        options:
          cwd: C:\bark-helper # 子进程工作目录
+       log: true # 将在 cwd 目录生成输出日志
    ```
 4. 点击编辑器右下角保存
 
