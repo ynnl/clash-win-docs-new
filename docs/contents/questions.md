@@ -2,9 +2,11 @@
 
 [[toc]]
 
-### Service Mode 无法安装（Windows）
+### Service Mode 无法安装
 
 <question-answer>
+
+#### Windows
 
 先确定系统安装了`.NET framework runtime`
 
@@ -20,11 +22,7 @@ service.exe start
 
 如安装出现错误，参考[这个 issue](https://github.com/Fndroid/clash_for_windows_pkg/issues/1627)
 
-</question-answer>
-
-### Service Mode 无法安装（macOS）
-
-<question-answer>
+#### macOS
 
 1. 打开终端
 2. 运行以下命令：
@@ -32,6 +30,17 @@ service.exe start
    curl https://gist.githubusercontent.com/Fndroid/2119fcb5ccb5a543a8f6a609418ae43f/raw/ff63615309a9b3f3e1d682fc29bc73284816422e/mac.sh > cfw-tun.sh && chmod +x cfw-tun.sh && sudo ./cfw-tun.sh install && rm cfw-tun.sh
    ```
    如要卸载则将 install 改为 uninstall
+
+#### linux
+
+1. 打开终端
+2. 运行以下命令：
+
+   ```sh
+   curl https://gist.githubusercontent.com/Fndroid/2119fcb5ccb5a543a8f6a609418ae43f/raw/592eba4f480c7ccb4f29c9b8e80d24bfd5dda8cf/linux.sh > cfw-tun.sh && chmod +x cfw-tun.sh && sudo ./cfw-tun.sh install <cfw安装目录>
+   ```
+
+   如要卸载则将 install 改为 uninstall，最后一部分位 CFW 安装目录
 
 </question-answer>
 
