@@ -95,3 +95,15 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
 当前版本下，使用`system`作为 TUN stack 时，需要在系统防火墙中将 Clash core 放行。[参考](https://github.com/Fndroid/clash_for_windows_pkg/issues/1936#issuecomment-853226838)
 
 </question-answer>
+
+### 在 Windows 系统中，TUN 模式下无法使用热点分享功能
+
+<question-answer>
+
+1. 开启热点分享功能，此时系统网络设置中会生成一个网卡
+2. 开启 TUN 模式
+3. 进入系统网络设置，在 Clash 网卡右键选择属性，选择共享标签页
+4. 勾选“允许其他网络用户通过此计算机的 Internet 连接来连接”
+5. 在“家庭网络连接”选择框中选择第 1 步生成的网卡
+
+</question-answer>
