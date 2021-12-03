@@ -7,6 +7,10 @@
 启动 TUN 模式需要进行如下操作：
 
 1. 点击`General`中`Service Mode`右边`Manage`，在打开窗口中安装服务模式，安装完成应用会自动重启，Service Mode 右边地球图标变为`绿色`即安装成功（无法安装参考：[这里](./questions.md#service-mode-无法安装-windows)）
+2. 点击`General`中`TUN Mode`右边开关启动 TUN 模式
+
+<outdated since="0.19.0">
+
 2. 在使用的配置文件中加入如下内容：
 
 ```yaml
@@ -50,11 +54,17 @@ dns:
 TUN 模式更推荐使用 fake-ip 模式
 :::
 
+</outdated>
+
 ## macOS
 
 启动 TUN 模式需要进行如下操作：
 
 1. 点击`General`中`Service Mode`右边`Manage`，在打开窗口中安装服务模式，安装完成应用会自动重启，Service Mode 右边地球图标变为`绿色`即安装成功
+2. 点击`General`中`TUN Mode`右边开关启动 TUN 模式
+
+<outdated since="0.19.0">
+
 2. 在使用的配置文件中加入如下内容：
 
 ```yaml
@@ -80,6 +90,8 @@ tun:
 ::: tip
 dns-hijack 不可以劫持局域网地址的 DNS，如 192.168.0.0/16，请务必手动设置系统 DNS
 :::
+
+</outdated>
 
 ::: tip
 若要将此 Mac 设置为代理网关，打开 IP 转发即可：
@@ -134,6 +146,10 @@ net.inet6.ip6.forwarding=1
 启动 TUN 模式需要进行如下操作：
 
 1. 点击`General`中`Service Mode`右边`Manage`，在打开窗口中安装服务模式，安装完成应用会自动重启（某些系统需要手动重启 APP），Service Mode 右边地球图标变为`绿色`即安装成功
+2. 点击`General`中`TUN Mode`右边开关启动 TUN 模式
+
+<outdated since="0.19.0">
+
 2. 在使用的配置文件中加入如下内容：
 
 ```yaml
@@ -153,6 +169,8 @@ tun:
 Linux 下一般不需要设置`interface-name`字段
 :::
 
+</outdated>
+
 ::: tip
 Service Mode 安装脚本使用 [Kr328/clash-premium-installer](https://github.com/Kr328/clash-premium-installer)
 :::
@@ -161,8 +179,6 @@ Service Mode 安装脚本使用 [Kr328/clash-premium-installer](https://github.c
 
 [Clash Wiki](https://github.com/Dreamacro/clash/wiki/Premium-Core-Features)
 
-## 技巧
-
-::: tip
-你可以使用[mixin](/contents/mixin.md)将上面内容合并至所有配置文件中，并使用 Mixin 开关 TUN 模式
+::: tip NOTICE
+如熟悉使用代码启动，也可以使用 [mixin](/contents/mixin.md) 功能进行其他配置
 :::
