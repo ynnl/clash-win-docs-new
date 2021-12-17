@@ -107,3 +107,25 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
 5. 在“家庭网络连接”选择框中选择第 1 步生成的网卡
 
 </question-answer>
+
+### 软件启动时，TUN 创建网卡失败，提示 Start Tun interface error: error creating interface: Cannot create a file when that file already exists.（Windows）
+
+<question-answer>
+
+临时解决方法：
+
+1. 进入 Home Directory
+2. 编辑 config.yaml，添加如下配置：
+   ```yaml
+   port: 7890
+   # ...
+   # 添加下面这段👇
+   tun:
+     enable: true
+     stack: gvisor
+     auto-route: false
+     auto-detect-interface: false
+   ```
+3. 重启 CFW
+
+</question-answer>
