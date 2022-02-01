@@ -24,7 +24,7 @@ export default {
           img: "https://sy168.site/tupian/clash.jpg",
         },
         {
-          url: "https://fastlink.la//auth/register?code=clashw",
+          url: "https://fastlink.so/auth/register?code=clashw",
           img: "https://download.fastlink.digital/fastlink_banner.jpg",
         },
         {
