@@ -20,20 +20,8 @@ export default {
           img: "https://i.loli.net/2021/03/24/G15Fj3dLTcqDM74.jpg",
         },
         {
-          url: "https://jike138.net/auth/register?code=LdON",
-          img: "https://sy168.site/tupian/clash.jpg",
-        },
-        {
           url: "https://fastlink.so/auth/register?code=clashw",
           img: "https://download.fastlink.digital/fastlink_banner.jpg",
-        },
-        {
-          url: "http://cylink.wtf",
-          img: "http://to.kache.moe/ad/clash_690_150.jpeg",
-        },
-        {
-          url: "http://china-cdn-net.com/CFW",
-          img: "https://ikuai349.obs.cn-south-1.myhuaweicloud.com/ChinaG.png",
         },
       ],
     };
