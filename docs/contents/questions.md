@@ -2,6 +2,29 @@
 
 [[toc]]
 
+### General 加载失败，显示“failed to clash core, logs are not available.”
+
+<question-answer>
+
+将安装目录添加到杀毒软件白名单。
+
+如 Windows Defender 开启，则需要将安装目录添加到[排除项](https://support.microsoft.com/zh-cn/windows/%E5%B0%86%E6%8E%92%E9%99%A4%E9%A1%B9%E6%B7%BB%E5%8A%A0%E5%88%B0-windows-%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83-811816c0-4dfd-af4a-47e4-c301afe13b26#:~:text=%E4%BE%9D%E6%AC%A1%E8%BD%AC%E5%88%B0%E2%80%9C%E5%BC%80%E5%A7%8B%E2%80%9D%E8%8F%9C%E5%8D%95,%E7%9A%84%E6%89%80%E6%9C%89%E5%AD%90%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%82)中
+
+</question-answer>
+
+### macOS 无法设置 System Proxy，系统代理项目灰色无法更改
+
+<question-answer>
+
+1. 进入**设置**
+2. 选择**安全与隐私**
+3. 选择**通用**
+4. 点击**解锁按钮**，输入密码
+5. 点击**高级...**
+6. 取消**访问系统范围的偏好设置需要输入管理员密码**选项
+
+</question-answer>
+
 ### Service Mode 无法安装
 
 <question-answer>
