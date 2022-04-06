@@ -57,6 +57,7 @@ module.exports = {
               },
               "/contents/ui/connections",
               "/contents/ui/logs",
+              "/contents/ui/settings",
               "/contents/ui/feedback",
             ],
           },
