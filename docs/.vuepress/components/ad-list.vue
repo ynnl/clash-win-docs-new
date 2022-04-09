@@ -23,6 +23,10 @@ export default {
           url: "https://fastlink.so/auth/register?code=clashw",
           img: "https://download.fastlink.digital/fastlink_banner.jpg",
         },
+        {
+          url: "https://tly.llc",
+          img: "https://tly.llc/asset/clash.gif",
+        },
       ],
     };
   },
