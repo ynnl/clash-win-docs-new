@@ -16,7 +16,7 @@ export default {
     return {
       ads: [
         {
-          url: "https://faster.goodfrog.net/wlS",
+          url: "https://i.sw13.icu/E6wn",
           img: "https://i.loli.net/2021/03/24/G15Fj3dLTcqDM74.jpg",
         },
         {
