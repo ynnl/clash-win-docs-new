@@ -17,7 +17,7 @@ export default {
       ads: [
         {
           url: "https://i.sw18.icu/hILA",
-          img: "https://i.loli.net/2021/03/24/G15Fj3dLTcqDM74.jpg",
+          img: "https://www.live4yc.top/public/static/upload/images/goods/2022/01/29/suwa.gif",
         },
         {
           url: "https://fastlink.so/auth/register?code=clashw",
