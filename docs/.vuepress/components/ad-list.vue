@@ -16,7 +16,7 @@ export default {
     return {
       ads: [
         {
-          url: "https://i.sw18.icu/hILA",
+          url: "https://i.sw8.pw/E6wn",
           img: "https://www.live4yc.top/public/static/upload/images/goods/2022/01/29/suwa.gif",
         },
         {
