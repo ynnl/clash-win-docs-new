@@ -16,10 +16,6 @@ export default {
     return {
       ads: [
         {
-          url: "https://i.sw8.pw/E6wn",
-          img: "https://www.live4yc.top/public/static/upload/images/goods/2022/01/29/suwa.gif",
-        },
-        {
           url: "https://fastlink.so/auth/register?code=clashw",
           img: "https://download.fastlink.digital/fastlink_banner.jpg",
         },
