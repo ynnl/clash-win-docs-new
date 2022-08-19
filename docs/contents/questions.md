@@ -147,7 +147,7 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
      enable: true
      stack: gvisor
      auto-route: false
-     auto-detect-interface: false
+     auto-detect-interface: true
    ```
 3. 重启 CFW
 
