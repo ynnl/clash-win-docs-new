@@ -27,7 +27,7 @@
 :::
 
 ::: tip NOTICE
-由于防火墙规则对`Junction`类型路径不生效，此功能无法用于 Scoop 安装的版本，Scoop 用户需自行编辑防火墙规则。这里给出一个[参考](https://raw.githubusercontent.com/AkariiinMKII/Scoop4kariiin/main/scripts/ClashforWindows/update-firewall-rules.ps1)。
+由于防火墙规则对`Junction`类型路径不生效，此功能无法用于 Scoop 安装的版本，Scoop 用户需自行编辑防火墙规则,或自建 bucket 实现。这里给出一个参考：[manifest](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/bucket/ClashforWindows.json#L48-L66) [script](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/scripts/ClashforWindows/update-firewall-rules.ps1#L1-L22)
 :::
 
 <outdated since="0.19.0">
