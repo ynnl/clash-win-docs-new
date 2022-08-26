@@ -16,9 +16,10 @@
 ::: tip NOTICE
 如果使用`system`作为 TUN stack，需要同时在系统防火墙中将 clash core 放行，方法如下：
 
-在`0.19.27`及更新版本中，点击 Clash Core 版本号前的图标，并在 UAC 弹窗（若有）中允许运行，cfw将自动配置对应的防火墙规则。
+在`0.19.27`及以上版本中，点击 Clash Core 版本号前的图标，并在 UAC 弹窗（若有）中允许运行，cfw将自动配置对应的防火墙规则。
 
 成功配置防火墙规则后该图标作为指示灯亮起。
+
 ![](~@imgs/firewallrule1.png)
 :::
 
@@ -27,7 +28,7 @@
 :::
 
 ::: tip NOTICE
-由于防火墙规则对`Junction`类型路径不生效，此功能无法用于 Scoop 安装的版本，Scoop 用户需自行编辑防火墙规则,或自建 bucket 实现。这里给出一个参考：[manifest](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/bucket/ClashforWindows.json#L48-L66) [script](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/scripts/ClashforWindows/update-firewall-rules.ps1#L1-L22)
+此功能无法用于 Scoop 安装的版本，Scoop 用户需要手动编辑防火墙规则，或使用自定义安装脚本实现自动编辑。这里给出一个参考：[manifest](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/bucket/ClashforWindows.json#L48-L66) [script](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/scripts/ClashforWindows/update-firewall-rules.ps1#L1-L22)
 :::
 
 <outdated since="0.19.0">
