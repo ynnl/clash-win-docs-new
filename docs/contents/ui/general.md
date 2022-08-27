@@ -33,6 +33,7 @@
 - UWP Loopback：快速打开回环代理限制器
 - TAP Device：打开TAP模式虚拟网卡控制面板
 - Service Mode: 打开TUN模式虚拟网卡控制面板
+- Allow LAN: 显示当前所有网卡IPV4 & IPV6地址
 
 ## 悬停行为
 
