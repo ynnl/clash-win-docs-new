@@ -115,7 +115,7 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
 
 <question-answer>
 
-当前版本下，使用`system`作为 TUN stack 时，需要在系统防火墙中将 Clash core 放行。[参考](https://github.com/Fndroid/clash_for_windows_pkg/issues/1936#issuecomment-853226838)
+请在系统防火墙中将 clash core 放行。方法参考 [TUN 模式说明](https://docs.cfw.lbyczf.com/contents/tun.html#windows)
 
 </question-answer>
 
