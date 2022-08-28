@@ -218,7 +218,7 @@
 
 ### Interface Name
 
-设置出口网络网卡（如非必要请勿设置）
+设置出口网络网卡(TAP模式)（如非必要请勿设置）
 
 ## Child Processes
 

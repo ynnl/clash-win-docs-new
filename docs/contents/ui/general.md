@@ -6,8 +6,8 @@
 
 ## 选项说明
 
-- Port：HTTP 代理端口
-- Socks Port：Socks5 代理端口
+- Port：Mixed(Http+Socks) 代理端口
+- ~~Socks Port：Socks5 代理端口~~
 - Allow LAN：是否允许局域网代理
 - Log Level：Clash 核心日志等级
 - IPV6: 是否启用IPV6
@@ -25,14 +25,21 @@
 
 ## 点击行为
 
+- Random Mixed Port(循环按钮): 随机设置Mixed端口
+- 端口: 设置Mixed端口号
+- info(Log Level): 设置日志类型
+- Clash Core
+  - 盾牌: 添加Allow LAN与System Stack的防火墙规则
+  - 内核版本号: 打开Clash内核控制页面
 - Connected to Clash core：快速打开 logs 文件夹
 - Clash for Windows（标题）：快速重启软件
 - v x.x.x: 当显示`new`提示时可以直接点击下载新版安装包 (每隔 6 小时检查一次更新)
 - Home Directory：快速打开配置文件目录
 - ~~GeoIP Database：点击更新 GeoIP 库~~
 - UWP Loopback：快速打开回环代理限制器
-- TAP Device：打开TAP模式虚拟网卡控制面板
-- Service Mode: 打开TUN模式虚拟网卡控制面板
+- TAP Device(Manage)：打开TAP模式虚拟网卡控制面板
+- Service Mode(Manage): 打开TUN模式虚拟网卡控制面板
+- 小齿轮图标: 打开TUN Mode/Mixin的配置文件
 - Allow LAN: 显示当前所有网卡IPV4 & IPV6地址
 
 ## 悬停行为
