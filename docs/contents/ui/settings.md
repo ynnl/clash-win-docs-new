@@ -2,6 +2,20 @@
 
 [[toc]]
 
+## Settings
+
+### Reset All Settings
+
+重置CFW的全部设置，恢复到默认值
+
+### Force Quit
+
+强制退出CFW
+
+### Quit
+
+正常退出CFW
+
 ## Securety
 
 ### Core Secret
