@@ -12,7 +12,7 @@
 - Log Level：Clash 核心日志等级
 - IPV6: 是否启用IPV6
 - Home Directory：Clash 配置文件目录（不建议修改此目录下文件内容）
-- ~~GeoIP Database：GeoIP 数据库更新~~
+- GeoIP Database：GeoIP 数据库更新
 - UWP Loopback：UWP 应用联网限制解除工具
 - TUN Mode: 是否启用TUN模式
 - Service Mode: 虚拟网卡安装(TUN模式)
@@ -35,7 +35,7 @@
 - Clash for Windows（标题）：快速重启软件
 - v x.x.x: 当显示`new`提示时可以直接点击下载新版安装包 (每隔 6 小时检查一次更新)
 - Home Directory：快速打开配置文件目录
-- ~~GeoIP Database：点击更新 GeoIP 库~~
+- GeoIP Database：点击更新 GeoIP 库
 - UWP Loopback：快速打开回环代理限制器
 - TAP Device(Manage)：打开TAP模式虚拟网卡控制面板
 - Service Mode(Manage): 打开TUN模式虚拟网卡控制面板
