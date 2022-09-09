@@ -28,8 +28,8 @@ module.exports = {
     },
     nav: [
       {
-        text: "Download the APP",
-        link: "https://github.com/Fndroid/clash_for_windows_pkg/releases",
+        text: "Download the Latest APP",
+        link: "https://github.com/Fndroid/clash_for_windows_pkg/releases/latest",
       },
     ],
     sidebar: [

@@ -320,6 +320,12 @@
 
 设置执行 Enhanced Tray 的 Script 代码快捷键
 
+## Cache
+
+### Fake IP Cache
+
+`Clear`清除Fake IP缓存
+
 ## Experimental Features（macOS）
 
 ### DHCP Server

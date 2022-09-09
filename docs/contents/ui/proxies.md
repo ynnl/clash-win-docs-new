@@ -16,4 +16,8 @@ Clash 共有三种工作模式：
 
 ## 切换节点
 
+::: tip
+延迟测试(网络图标)可测试所有节点的延迟，可在Settings→Latency Test URL修改测试URL
+:::
+
 节点按照策略组分开，并可以以组为单位进行延迟测试，可以方便选出延迟更低的节点。或者可以使用策略组优化逻辑，策略组原理请参考：[策略组原理理解](https://github.com/Fndroid/jsbox_script/wiki/%E5%85%B3%E4%BA%8E%E7%AD%96%E7%95%A5%E7%BB%84%E7%9A%84%E7%90%86%E8%A7%A3)
