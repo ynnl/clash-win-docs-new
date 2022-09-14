@@ -193,10 +193,6 @@ Linux 下一般不需要设置`interface-name`字段
 
 </outdated>
 
-::: tip
-Service Mode 安装脚本使用 [Kr328/clash-premium-installer](https://github.com/Kr328/clash-premium-installer)
-:::
-
 ## 配置文件参考
 
 [Clash Wiki](https://github.com/Dreamacro/clash/wiki/Premium-Core-Features)
