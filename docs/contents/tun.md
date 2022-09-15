@@ -21,14 +21,39 @@
 成功配置防火墙规则后该图标作为指示灯亮起。
 
 ![](~@imgs/firewallrule1.png)
+
+在 [Scoop](https://scoop.sh/) 版上使用此功能需要`0.20.3`及以上版本，并且每次更新 CFW 后都需要更新防火墙规则。如果要通过 Scoop 安装脚本实现自动更新规则，可以参考：[manifest](https://github.com/AkariiinMKII/Scoop4kariiin/blob/440f19c6c1cc70176e04221d16c8e806255ca325/bucket/ClashforWindows.json#L49-L70) [script](https://github.com/AkariiinMKII/Scoop4kariiin/blob/440f19c6c1cc70176e04221d16c8e806255ca325/scripts/ClashforWindows/update-firewall-rules.ps1#L1-L22)
 :::
 
 ::: tip NOTICE
-由于 APP 权限等原因，指示灯功能可能无法正常工作，请以系统防火墙列表及 Clash 网卡运行状态为准。
-:::
+由于查询防火墙权限受限等原因，指示灯可能无法正常工作，请以系统防火墙列表及 Clash 网卡运行状态为准。
 
-::: tip NOTICE
-此功能无法用于 Scoop 安装的版本，Scoop 用户需要手动编辑防火墙规则，或使用自定义安装脚本实现自动编辑。这里给出一个参考：[manifest](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/bucket/ClashforWindows.json#L48-L66) [script](https://github.com/AkariiinMKII/Scoop4kariiin/blob/76239609823147ca6afff595f51527db49759740/scripts/ClashforWindows/update-firewall-rules.ps1#L1-L22)
+这里提供一个可用于自查的 PowerShell 脚本（视情况需以管理员权限运行）：
+
+```PowerShell
+$List = Get-NetFirewallRule -Enabled True | Where-Object {($_.DisplayName -eq "Clash Core") -and ($_.Description -eq "Work with Clash for Windows.") -and ($_.Action -eq "Allow")}
+$Output = $List | ForEach-Object {
+    $Program = $_ | Get-NetFirewallApplicationFilter | Select-Object -ExpandProperty Program
+    $Protocol = $_ | Get-NetFirewallPortFilter | Select-Object -ExpandProperty Protocol
+    $Rule = New-Object PsObject
+    $Rule | Add-Member -MemberType NoteProperty -Name "Enabled" -Value $_.Enabled
+    $Rule | Add-Member -MemberType NoteProperty -Name "Action" -Value $_.Action
+    $Rule | Add-Member -MemberType NoteProperty -Name "Protocol" -Value $Protocol
+    $Rule | Add-Member -MemberType NoteProperty -Name "Program" -Value $Program
+    $Rule
+}
+$Output | Format-Table
+Read-Host -Prompt "Press any key to continue"
+```
+
+以64位版本为例，如果输出类似以下内容则说明规则添加成功（请自行验证路径有效性）：
+
+```PowerShell
+Enabled Action Protocol Program
+------- ------ -------- -------
+   True  Allow TCP      C:\...\resources\static\files\win\x64\clash-win64.exe
+   True  Allow UDP      C:\...\resources\static\files\win\x64\clash-win64.exe
+```
 :::
 
 <outdated since="0.19.0">
