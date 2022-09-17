@@ -1,6 +1,6 @@
 # 绕过系统代理
 
-Clash for Windows 在 v 0.4.5 版本后可以自定义系统代理需要绕过的域名或 IP
+Clash for Windows 在 v0.4.5 版本后可以自定义系统代理需要绕过的域名或 IP
 
 ## 设置方式
 

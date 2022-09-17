@@ -152,3 +152,11 @@ sudo xattr -r -d com.apple.quarantine /Applications/Clash\ for\ Windows.app
 3. 重启 CFW
 
 </question-answer>
+
+### 为什么更新到最新版本后 Service Mode 后面的地球变红了？
+
+<question-answer>
+
+在更新到 `v0.20.0` 后， `Service Mode` 的安全性有所提高，因此在从 `v0.19.29` 及以下版本更新到此版本时, `Service Mode` 后面的地球图标可能会显示为红色，请在 Manage 中选择 `Update` 或重新安装 TUN 网卡来消除此问题
+
+</question-answer>

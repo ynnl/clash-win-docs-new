@@ -6,15 +6,15 @@
 
 ### Reset All Settings
 
-重置CFW的全部设置，恢复到默认值
+重置 CFW 的全部设置，恢复到默认值
 
 ### Force Quit
 
-强制退出CFW
+强制退出 CFW
 
 ### Quit
 
-正常退出CFW
+正常退出 CFW
 
 ## Securety
 
@@ -232,7 +232,7 @@
 
 ### Interface Name
 
-设置出口网络网卡(TAP模式)（如非必要请勿设置）
+设置出口网络网卡（如非必要请勿设置，后续版本将去处此功能）
 
 ## Child Processes
 
@@ -324,7 +324,7 @@
 
 ### Fake IP Cache
 
-`Clear`清除Fake IP缓存
+`Clear`清除 Fake IP 缓存
 
 ## Experimental Features（macOS）
 
