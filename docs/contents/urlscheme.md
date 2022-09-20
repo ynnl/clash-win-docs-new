@@ -31,8 +31,18 @@ profile-update-interval: 12
 如果响应头中存在`subscription-userinfo`字段，则其对应的流量及到期信息会显示在 Profiles 模块中，[规范参考此处](https://github.com/crossutility/Quantumult/blob/master/extra-subscription-feature.md)
 
 ```
-subscription-userinfo: upload=455727941; download=6174315083; total=1073741824000; expire=1671815872.8
+subscription-userinfo: upload=455727941; download=6174315083; total=1073741824000; expire=1671815872
 ```
+
+::: tip
+此外，CFW 支持识别添加在配置文件首行的`subscription-userinfo`，格式以`#`开头，以`;`结尾。示例
+
+```
+# upload=455727941; download=6174315083; total=1073741824000; expire=1671815872;
+```
+
+因此可以使用预处理脚本定期更新本地配置文件中的订阅信息，[参考案例](https://docs.cfw.lbyczf.com/contents/parser.html#向本地配置文件添加订阅信息)。
+:::
 
 ## 退出软件
 

@@ -13,6 +13,7 @@
 1. 进入 Settings 界面
 2. 滚动至 Profiles 栏
 3. 点击 Parsers 右边 Edit 打开编辑器，填入：
+
    ```yaml
    parsers:
      - url: https://example.com/profile.yaml
@@ -25,6 +26,7 @@
              server: 123.123.123.123
              port: 456
    ```
+
 4. 点击编辑器右下角保存按钮
 
 当配置文件触发刷新（包括自动更新）时，CFW 会读取`yaml`字段定义的值，将对应值插入/合并到原配置文件中
@@ -116,6 +118,7 @@ yaml:
 1. 进入 Settings 界面
 2. 滚动至 Profiles 栏
 3. 点击 Parsers 右边 Edit 打开编辑器，填入：
+
    ```yaml
    parsers:
      - url: https://example.com/profile.yaml
@@ -125,6 +128,7 @@ yaml:
            return yaml.stringify(obj)
          }
    ```
+
 4. 点击编辑器右下角保存按钮
 
 当配置文件触发刷新（包括自动更新）时，CFW 会调用此方法对下载的配置文件内容进行处理，再写入本地文件中
@@ -205,4 +209,38 @@ parsers:
 
 ::: tip
 file 同时支持 yaml 及 js 格式的文件
+:::
+
+## 使用案例
+
+### 向本地配置文件添加订阅信息
+
+1. 准备一个本地配置文件副本，记下文件名和路径。此副本将作为订阅源使用，配置完成后对配置文件的修改需要在此副本中进行。为方便后续说明，以下用`myprofile.yml`指代此文件名，用`C:\...\myprofile.yml`指代此文件路径。
+
+2. 准备一个包含订阅信息[`subscription-userinfo`](https://docs.cfw.lbyczf.com/contents/urlscheme.html#subscription-userinfo)的订阅链接。为方便后续说明，以下用`https://example.com/subscription_url`指代此订阅链接。
+
+3. 修改配置文件选项，在`URL`中填写副本文件的本地映射路径`file:///C:\...\myprofile.yml`。保存后点击更新确保没有报错。
+
+4. 编辑预处理脚本
+
+```yaml
+parsers: # array
+  - reg: 'myprofile.yml'
+    code: |
+      module.exports.parse = async (raw, { axios, yaml, notify, console }) => {
+        raw = raw.replace(/# upload=\d*; download=\d*; total=\d*; expire=\d*;*\n/gm,'')
+        const url = 'https://example.com/subscription_url'
+        let { headers:{"subscription-userinfo": si = ""}={}, status } = await axios.head(url)
+        si = si.replace(/;*$/g,'')
+        if (status === 200 && si) {
+          return `# ${si};\n${raw}`
+        }
+        return raw
+      }
+```
+
+5. 更新配置文件，确保出现订阅信息示意图。成功后可自行设置自动更新周期。
+
+::: tip
+在第 1 步中，使用该配置文件本身作为订阅源虽然可以运行，但无法保证可靠性，不建议这样操作。
 :::
