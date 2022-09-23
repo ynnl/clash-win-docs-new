@@ -126,7 +126,7 @@
 
 ### PAC Content （Windows）
 
-设置系统代理类型为 PAC 时，对应 PAC 脚本内容
+设置系统代理类型为 PAC 时，对应 PAC 脚本内容。[规范参考此处](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
 
 ### Bypass Domain/IPNet
 
