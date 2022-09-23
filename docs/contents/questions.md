@@ -56,14 +56,7 @@ service.exe start
 
 #### linux
 
-1. 打开终端
-2. 运行以下命令：
-
-   ```sh
-   curl https://gist.githubusercontent.com/Fndroid/2119fcb5ccb5a543a8f6a609418ae43f/raw/592eba4f480c7ccb4f29c9b8e80d24bfd5dda8cf/linux.sh > cfw-tun.sh && chmod +x cfw-tun.sh && sudo ./cfw-tun.sh install <cfw安装目录>
-   ```
-
-   如要卸载则将 install 改为 uninstall，最后一部分位 CFW 安装目录
+[参考](https://github.com/Fndroid/clash_for_windows_pkg/issues/3464)
 
 </question-answer>
 
