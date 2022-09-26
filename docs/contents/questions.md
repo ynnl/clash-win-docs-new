@@ -67,6 +67,8 @@ service.exe stop
 service.exe uninstall
 ```
 
+如果安装后，Service Mode manage 里显示 active 但图标显示红色，可以进入 `Home Directory` 管理员启动 CMD，执行 `icacls.exe service /remove:d Everyone` 后手动删除 service 文件夹，重启 APP 即可
+
 <outdated since="0.20.0">
 1. 点击 General 中的 Home Directory 打开文件夹，进入 service 子目录中
 2. 打开 CMD，执行以下命令：
