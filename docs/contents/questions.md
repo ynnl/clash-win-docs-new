@@ -35,6 +35,39 @@
 
 然后尝试手动安装：
 
+1. 打开 `C:/Program Files` 目录，新建 `Clash for Windows Service` 目录
+2. 进入 `安装目录/resources/static/files/win/[x64|arm64|ia32]/service` 目录，拷贝里面两个 exe 文件到 1 中新建目录中
+3. 进入 `安装目录/resources/static/files/win/common` 目录，拷贝 `service.yml` 文件到 1 中新建目录中
+4. 在 1 中新建目录中，使用管理员权限打开 CMD 执行一下命令：
+   ```
+   service.exe install
+   service.exe start
+   ```
+
+如果 install 时出现如下提示：
+
+```
+Service with id 'Clash Core Service' already exists
+To install the service, delete the existing one or change service Id in the configuration file
+2022-09-26 09:37:32,316 FATAL - Unhandled exception
+System.Exception: Installation failure: Service with id 'Clash Core Service' already exists
+   at WinSW.Program.<Run>g__Install|2_0(<>c__DisplayClass2_0& )
+   at WinSW.Program.Run(String[] argsArray, IWinSWConfiguration descriptor)
+   at WinSW.Program.Main(String[] args)
+System.Exception: Installation failure: Service with id 'Clash Core Service' already exists
+   at WinSW.Program.<Run>g__Install|2_0(<>c__DisplayClass2_0& )
+   at WinSW.Program.Run(String[] argsArray, IWinSWConfiguration descriptor)
+   at WinSW.Program.Main(String[] args)
+```
+
+可以先执行：
+
+```
+service.exe stop
+service.exe uninstall
+```
+
+<outdated since="0.20.0">
 1. 点击 General 中的 Home Directory 打开文件夹，进入 service 子目录中
 2. 打开 CMD，执行以下命令：
 
@@ -44,6 +77,8 @@ service.exe start
 ```
 
 如安装出现错误，参考[这个 issue](https://github.com/Fndroid/clash_for_windows_pkg/issues/1627)
+
+</outdated>
 
 #### macOS
 
