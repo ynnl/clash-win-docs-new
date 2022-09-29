@@ -23,6 +23,10 @@ export default {
           url: "https://speedcat-aff.com/auth/register?code=gYgD",
           img: "https://speedcat.co/speedcat-banner.jpg",
         },
+        {
+          url: "https://jkcloud.net",
+          img: "https://sadwadhoa.oss-cn-shanghai.aliyuncs.com/ad.jpg",
+        },
       ],
     };
   },
