@@ -44,6 +44,10 @@ subscription-userinfo: upload=455727941; download=6174315083; total=107374182400
 因此可以使用预处理脚本定期更新本地配置文件中的订阅信息，[参考案例](https://docs.cfw.lbyczf.com/contents/parser.html#向本地配置文件添加订阅信息)。
 :::
 
+#### profile-web-page-url
+
+如果响应头中存在`profile-web-page-url`字段，则在右键点击 profile 菜单中会显示`Open web page`选项，允许用户跳转到对应的门户首页
+
 ## 退出软件
 
 ```
