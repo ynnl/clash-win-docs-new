@@ -16,11 +16,15 @@
 
 正常退出 CFW
 
-## Securety
+## Security
 
 ### Core Secret
 
 设置 Home Directory/config.yaml 中 secret 参数为随机 uuid4，访问核心 API 被网页直接调用
+
+### Allow unsafe URLs
+
+设置在请求时不验证认证的 URL
 
 ## General
 
