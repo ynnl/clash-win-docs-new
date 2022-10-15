@@ -220,7 +220,7 @@ Linux 下一般不需要设置`interface-name`字段
 
 ## 配置文件参考
 
-[Clash Wiki](https://github.com/Dreamacro/clash/wiki/Premium-Core-Features)
+[Clash Wiki](https://github.com/Dreamacro/clash/wiki/Clash-Premium-Features)
 
 ::: tip NOTICE
 如熟悉使用代码启动，也可以使用 [mixin](/contents/mixin.md) 功能进行其他配置
